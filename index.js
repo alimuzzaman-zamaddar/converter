@@ -57,3 +57,8 @@ function downloadText() {
     // Remove the anchor element
     document.body.removeChild(a);
 }
+function copyToClipboard() {
+    const textInput = document.getElementById('input-field');
+    textInput.select();
+    document.execCommand('copy');
+}

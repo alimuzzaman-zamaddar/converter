@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Text Conversion</title>
-</head>
-<body>
+  </head>
+  <body>
+    
+    <textarea
+      onkeyup="countLettersAndWordsAndSentences()"
+      name="input-data"
+      placeholder="input your data to convert"
+      id="input-field"
+      cols="80"
+      rows="10"
+    ></textarea>
+    <button onclick="convertToUpperCase()">to uppercase</button>
+    <button onclick="convertToLowerCase()">to lowercase</button>
+    <button onclick="downloadText()">download text</button>
+    <button onclick="copyToClipboard()">copy board</button>
 
-<textarea onkeyup="countLettersAndWordsAndSentences()" name="input-data" placeholder="input your data to convert" id="input-field" cols="80" rows="10"></textarea>
-<button onclick="convertToUpperCase()">to uppercase</button>
-<button onclick="convertToLowerCase()"> to lowercase</button>
-<button onclick="downloadText()">download text</button>
+    <p>
+      Letter count: <span id="count">0</span> Word count:
+      <span id="word-count">0</span> Sentence count:
+      <span id="sentence-count">0</span>
+    </p>
 
-<p>
-    Letter count: <span id="count">0</span>
-    Word count: <span id="word-count">0</span>
-    Sentence count: <span id="sentence-count">0</span>
-</p>
-
-<script src="index.js">
-
-</script>
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
